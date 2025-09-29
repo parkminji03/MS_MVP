@@ -7,5 +7,5 @@ MS AI 교육 MVP 프로젝트 제출용
 pip install -r requirements.txt
 
 #추가 패키지 설치
-pip install streamlit transformers torch matplotlib
+pip install streamlit transformers torch matplotlib dotenv
 ```
