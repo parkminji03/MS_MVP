@@ -68,7 +68,7 @@ flowchart TD
 ## ⚙️ 설치 및 실행 방법
  **1. 저장소 클론** 
  ``` C
-git clone
+git clone https://github.com/parkminji03/MS_MVP.git
 ```
 **2.필수 라이브러리 설치**
 ``` C
