@@ -22,7 +22,7 @@
 ## 💡 해결 방법
 - **Azure Text Analytics** → 감정분석 (긍정/부정/중립)  
 - **Azure OpenAI** → 요약 및 QnA 생성  
-- **Azure Cognitive Search** → 관련 응답 검색 (RAG)  
+- **Azure Search** → 관련 응답 검색 (RAG)  
 - **Streamlit + Plotly** → 대시보드 시각화  
 
 ---
@@ -41,17 +41,26 @@ flowchart TD
 **1. 요약 탭**
 - 항목별 긍정/부정 요약
 - 만족도 점수 및 그래프 시각화
+- - **사용된 AI 기술**  
+  - Azure Text Analytics → 응답별 감정분석(긍정/부정/중립/기타)  
+  - Azure OpenAI → 긍정/부정 응답 요약 생성
   <img width="907" height="852" alt="image" src="https://github.com/user-attachments/assets/8a4029d7-eda0-4016-a070-a57db6823e91" />
   <img width="900" height="350" alt="image" src="https://github.com/user-attachments/assets/095429bb-837f-47c1-a14f-dea724b63e48" />
 
 
 **2. 상세 탭**
 - 항목별 긍정/부정 응답 원문 확인
+- **사용된 AI 기술**  
+  - Azure Text Analytics → 각 응답의 감정 분류 결과를 기반으로 긍정/부정 그룹화
   <img width="907" height="843" alt="image" src="https://github.com/user-attachments/assets/3e747a49-3b61-4c20-a982-70d48b410dac" />
 
 **3. QnA 탭**
 - 사용자가 질문 입력 → 관련 응답 검색 → AI 답변 생성
 - 답변과 함께 근거 응답 제시
+- **사용된 AI 기술**  
+  - Azure Search → 질문과 관련된 응답 검색 (Retrieval 단계)  
+  - Azure OpenAI → 검색된 응답을 컨텍스트로 활용해 답변 생성 (Generation 단계)  
+  - → 두 기술을 결합한 **RAG(Retrieval-Augmented Generation) 구조** 적용
 <img width="908" height="689" alt="image" src="https://github.com/user-attachments/assets/b1854a67-cdca-4a28-ac79-4581d80d0b5b" />
 
 ---
@@ -113,6 +122,6 @@ streamlit run app.py
 - 도메인 특화 파인튜닝 모델 적용
 
 **AZURE SEARCH 강화** 
-- 현재는 Azure Cognitive Search의 키워드/세맨틱 검색을 활용  
+- 현재는 Azure Search의 키워드/세맨틱 검색을 활용  
 - 향후에는 **벡터 임베딩 기반 검색(Vector Search)**을 적용하여  
   질문과 응답 간의 **의미적 유사도**를 더 정확하게 반영  
