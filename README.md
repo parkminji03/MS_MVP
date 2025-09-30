@@ -58,7 +58,6 @@ flowchart TD
 
 ## 🛠️ 기술 스택
 - **Frontend/UI**: Streamlit
-- **Data Handling** : Pandas
 - **Visualization**: Plotly
 - **AI 분석**: Azure Text Analytics, Azure OpenAI
 - **검색 인덱스**: Azure Search
