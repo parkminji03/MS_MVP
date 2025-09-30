@@ -37,7 +37,7 @@ flowchart TD
     C --> D[Azure Cognitive Search 인덱싱]
     D --> E[Streamlit 대시보드]
     E --> F[요약 / 상세 / QnA]
-``
+```
 ---
 ## 🖼️ 주요 화면 예시
 **1. 요약 탭**
